@@ -125,6 +125,7 @@ class LinkedList:
             current = current.next
         current.value = new_value
 
+
     # Delete the first element from the linked list
     def pop_first(self):
 
@@ -147,6 +148,31 @@ class LinkedList:
             to_pop.next = None
             self.length -= 1
         return to_pop
+    
+
+    # Delete the last node from the linked list.
+    def pop(self):
+        last_element = self.tail
+
+        # If the linked list is empty, return None.
+        if self.length == 0:
+            return None
+
+        # If the length of the linked list is 1, remove it by settin the head and tail pointer to None.
+        if self.length == 1:
+            self.head = self.tail = None
+        
+        else:    
+            temp = self.head
+            while temp.next is not last_element: # Loop to the second last element of the linked list
+                temp = temp.next
+            self.tail = temp # Set the tail to the second last element of the linked list
+            temp.next = None # Set the next pointer to None.
+            self.length -= 1 # Reduce the length of the linked list by 1
+            return last_element # Return the the last element of the initial linked list.
+
+
+
 
     
 
