@@ -132,19 +132,21 @@ class LinkedList:
         if self.length == 0:
             return None
         
+        to_pop = self.head
+
         # In case the length of the linked list is 1, just set the head and tail to None.
-        elif self.length == 1:
+        if self.length == 1:
             self.head = None
             self.tail = None
+            self.length -= 1
 
         # Set the first node's next pointer to none
         # Set the next pointer of the first node to the new head.
         else:
-            current = self.head
-            self.head = current.next
-            current.next = None
+            self.head = to_pop.next
+            to_pop.next = None
             self.length -= 1
-            return current
+        return to_pop
 
     
 
