@@ -88,6 +88,27 @@ class LinkedList:
                 return True
             current = current.next
         return False
+    
+
+    # Get value form a specific index in a linked list
+    def get(self, index):
+
+        # Return none if the index is less than -1 or greater than the length of the linked list.
+        if index >= self.length or index < -1:
+            return None
+        
+        # Return the last element
+        if index == -1:
+            return self.tail.value
+        
+        # Get the head and loop to the desired index then return its value
+        current = self.head
+        for _ in range(index):
+            current = current.next
+        return current.value
+
+    
+
 
 
 
@@ -116,5 +137,13 @@ if (new_linked_list.search(2)):
     print("Found")
 else:
     print("Not found")
+
+result = new_linked_list.get(0)
+if (result):
+    print(result)
+else:
+    print("No element found in that index")
+
+
 
 
