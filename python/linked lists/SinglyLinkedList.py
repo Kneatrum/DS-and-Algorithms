@@ -125,6 +125,27 @@ class LinkedList:
             current = current.next
         current.value = new_value
 
+    # Delete the first element from the linked list
+    def pop_first(self):
+
+        # In case the length of the linked list is 0, return none.
+        if self.length == 0:
+            return None
+        
+        # In case the length of the linked list is 1, just set the head and tail to None.
+        elif self.length == 1:
+            self.head = None
+            self.tail = None
+
+        # Set the first node's next pointer to none
+        # Set the next pointer of the first node to the new head.
+        else:
+            current = self.head
+            self.head = current.next
+            current.next = None
+            self.length -= 1
+            return current
+
     
 
 
@@ -163,6 +184,9 @@ else:
     print("No element found in that index")
 
 new_linked_list.update(2, 5)
+print(new_linked_list)
+
+new_linked_list.pop_first()
 print(new_linked_list)
 
 
