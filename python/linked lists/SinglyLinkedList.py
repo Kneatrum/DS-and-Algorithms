@@ -80,6 +80,15 @@ class LinkedList:
             current = current.next
 
 
+    # Searching for a node in a linked list.
+    def search(self, node):
+        current = self.head
+        while current is not None:
+            if current.value == node:
+                return True
+            current = current.next
+        return False
+
 
 
 new_linked_list = LinkedList()
@@ -102,5 +111,10 @@ print(new_linked_list)
 print("Length of linked list: " + str(new_linked_list.length))
 
 new_linked_list.traverse()
+
+if (new_linked_list.search(2)):
+    print("Found")
+else:
+    print("Not found")
 
 
