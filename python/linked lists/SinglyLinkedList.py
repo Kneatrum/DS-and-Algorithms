@@ -48,6 +48,10 @@ class LinkedList:
         new_node = Node(value)
         temp_node = self.head
 
+        # Prevent insertion to a negative index or an index greater than the length of the linked list
+        if index < 0 or index >= self.length:
+            return False
+
         # If the linked list is empty, set the new node as the head and tail
         if self.head is None:
             self.head = new_node
