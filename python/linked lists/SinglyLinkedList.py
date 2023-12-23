@@ -43,6 +43,17 @@ class LinkedList:
             self.head = new_node
         self.length += 1
 
+    # Implementation of a method to add a new node to a specific index in the linked list.
+    def insert(self, index, value):
+        new_node = Node(value)
+        temp_node = self.head
+        for _ in range(index - 1):
+            temp_node = temp_node.next
+        new_node.next = temp_node.next
+        temp_node.next = new_node
+        self.length += 1
+
+
 
 
 new_linked_list = LinkedList()
@@ -57,6 +68,10 @@ print(new_linked_list)
 print("Length of linked list: " + str(new_linked_list.length))
 
 new_linked_list.prepend(5)
+print(new_linked_list)
+print("Length of linked list: " + str(new_linked_list.length))
+
+new_linked_list.insert(2, 15)
 print(new_linked_list)
 print("Length of linked list: " + str(new_linked_list.length))
 
