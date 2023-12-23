@@ -69,6 +69,16 @@ class LinkedList:
             temp_node.next = new_node
             self.length += 1
 
+    # Traversing a linked list.
+    def traverse(self):
+        current = self.head
+        while current is not None:
+            if current.next is not None:
+                print(current.value, end=' ') # Adding a space after printing the value if the next value is not null.
+            else:
+                print(current.value)
+            current = current.next
+
 
 
 
@@ -90,5 +100,7 @@ print("Length of linked list: " + str(new_linked_list.length))
 new_linked_list.insert(2, 15)
 print(new_linked_list)
 print("Length of linked list: " + str(new_linked_list.length))
+
+new_linked_list.traverse()
 
 
