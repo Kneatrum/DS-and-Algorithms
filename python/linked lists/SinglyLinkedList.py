@@ -47,11 +47,21 @@ class LinkedList:
     def insert(self, index, value):
         new_node = Node(value)
         temp_node = self.head
-        for _ in range(index - 1):
-            temp_node = temp_node.next
-        new_node.next = temp_node.next
-        temp_node.next = new_node
-        self.length += 1
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        # If it is the 0th index, we need to set the new node as the head.
+        elif index == 0:
+            new_node.next = temp_node
+            self.head = new_node
+        # Else, loop to (index - 1), set the new node's next pointer
+        # to the temp node's next pointer (index), and then set the current node (temp_node's) next pointer to the new node
+        else: 
+            for _ in range(index - 1):
+                temp_node = temp_node.next
+            new_node.next = temp_node.next
+            temp_node.next = new_node
+            self.length += 1
 
 
 
