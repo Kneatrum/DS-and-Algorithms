@@ -47,6 +47,8 @@ class LinkedList:
     def insert(self, index, value):
         new_node = Node(value)
         temp_node = self.head
+
+        # If the linked list is empty, set the new node as the head and tail
         if self.head is None:
             self.head = new_node
             self.tail = new_node
