@@ -223,6 +223,18 @@ class LinkedList:
         self.tail = None
         self.length = 0
 
+    # Reverse a singly linked list
+    def reverse(self):
+        prev_node = None
+        current_node = self.head
+        while current_node is not None:
+            next_node = current_node.next
+            current_node.next = prev_node
+            prev_node = current_node
+            current_node = next_node
+        self.head = prev_node
+
+
 
 
 
@@ -274,7 +286,10 @@ print(new_linked_list)
 new_linked_list.delete(-1)
 print(new_linked_list)
 
-new_linked_list.delete_all()
+# new_linked_list.delete_all()
+# print(new_linked_list)
+
+new_linked_list.reverse()
 print(new_linked_list)
 
 
