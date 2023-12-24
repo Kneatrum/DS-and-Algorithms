@@ -234,6 +234,22 @@ class LinkedList:
             current_node = next_node
         self.head = prev_node
 
+    # Find the middle of a linked list.
+    def find_middle(self):
+        current = self.head
+        
+        mid =  int(self.length/2)
+        if self.length % 2 == 0:
+            for _ in range(mid):
+                current = current.next
+            return current.value
+        else:
+            for _ in range(round(mid)):
+                current = current.next
+            return current.value
+        
+
+
 
 
 
