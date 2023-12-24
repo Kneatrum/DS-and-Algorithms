@@ -99,13 +99,13 @@ class LinkedList:
         
         # Return the last element
         if index == -1:
-            return self.tail.value
+            return self.tail
         
         # Get the head and loop to the desired index then return its value
         current = self.head
         for _ in range(index):
             current = current.next
-        return current.value
+        return current
     
 
     # Update value form a specific index in a linked list
@@ -170,6 +170,52 @@ class LinkedList:
             temp.next = None # Set the next pointer to None.
             self.length -= 1 # Reduce the length of the linked list by 1
             return last_element # Return the the last element of the initial linked list.
+        
+    # Delete a node from a specific index in the linked list
+    def delete(self, index):
+        # First method.
+
+        # If the index is more then the length of the linked list or less than -1, return None
+        if index >= self.length or index <- 1:
+            return None
+        
+        # If the index is 0, that means we can only pop the first element.
+        if index == 0:
+            return self.pop_first()
+        
+        # If the index points to the last elemen, it means we can only remove the last element (pop).
+        if index == self.length - 1 or index == -1:
+            return self.pop()
+        
+        prev_node = self.get(index - 1)
+        to_delete = prev_node.next
+
+        prev_node.next = to_delete.next
+        to_delete.next = None
+        self.length -= 1
+        
+
+        # Second method. (Just for fun:)
+        '''
+        current = self.head
+        before = None
+        to_delete = None
+
+        for i in range(index + 1):
+            if i == index - 1:
+                before = current
+            elif i == index:
+                to_delete = current
+            current = current.next
+        
+
+        before.next = current
+        to_delete.next = None
+        self.length -= 1
+        '''
+
+        return to_delete
+
 
 
 
@@ -215,6 +261,10 @@ new_linked_list.update(2, 5)
 print(new_linked_list)
 
 new_linked_list.pop_first()
+print(new_linked_list)
+
+
+new_linked_list.delete(-1)
 print(new_linked_list)
 
 
