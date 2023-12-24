@@ -215,6 +215,13 @@ class LinkedList:
         '''
 
         return to_delete
+    
+
+    # Delete entire linked list.
+    def delete_all(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
 
 
 
@@ -265,6 +272,9 @@ print(new_linked_list)
 
 
 new_linked_list.delete(-1)
+print(new_linked_list)
+
+new_linked_list.delete_all()
 print(new_linked_list)
 
 
