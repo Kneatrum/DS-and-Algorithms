@@ -258,7 +258,24 @@ class LinkedList:
             fast = fast.next.next
         return slow
     '''    
-        
+
+    # Removing duplicates from a linked list
+    def remove_duplicates(self):
+        seen = set()
+        prev = None
+        current = self.head
+
+        while current is not None:
+            if current.value in seen:
+                # Remove the current node
+                prev.next = current.next
+            else:
+                # Add the current value to the set
+                seen.add(current.value)
+                prev = current
+            
+            current = current.next
+
 
 
 
