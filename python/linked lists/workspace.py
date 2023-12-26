@@ -9,10 +9,12 @@ from circular_singly_linked_list import *
 
 
 
-
+# Create an instance of a circular_singly_linked_list
 c_linked_list = CircularSinglyLinkedList()
 
-
+# Append a new value to the list and print it out
+c_linked_list.append(10)
+print(c_linked_list.head.value)
 
 
 
