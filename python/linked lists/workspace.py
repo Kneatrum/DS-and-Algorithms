@@ -18,6 +18,10 @@ c_linked_list.append(20)
 c_linked_list.append(30)
 print(c_linked_list)
 
+# Prepend a new value to the list and print it out
+c_linked_list.prepend(5)
+print(c_linked_list)
+
 
 
 
