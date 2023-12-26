@@ -44,7 +44,7 @@ class CircularSinglyLinkedList:
         else:
             self.tail.next = new_node
             new_node.next = self.head
-            self.head = new_node
+            self.tail = new_node
         self.length += 1
         
 
