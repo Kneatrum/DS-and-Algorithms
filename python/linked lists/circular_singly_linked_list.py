@@ -20,6 +20,6 @@ class CircularSinglyLinkedList:
         self.tail = new_node
         self.length = 1
     '''
+    
 
 
-c_linked_list = CircularSinglyLinkedList()
