@@ -46,6 +46,21 @@ class CircularSinglyLinkedList:
             new_node.next = self.head
             self.tail = new_node
         self.length += 1
+
+
+    def prepend(self, value):
+        new_node = Node(value)
+        # If the linked list is empty, create a new node and let the tail point to itself.
+        if self.head == None:
+            self.head = new_node
+            self.tail = new_node
+            new_node.next = new_node
+        # Else let the tail point to the new head, and the new node point to the existing head, then set the new node as the new head.
+        else:
+            new_node.next = self.head
+            self.head = new_node
+            self.tail.next = self.head
+        self.length += 1
         
 
 
