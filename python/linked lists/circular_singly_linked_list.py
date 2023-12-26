@@ -5,7 +5,6 @@ class Node:
         self.next = None
 
 class CircularSinglyLinkedList:
-
     # Empty circular linked list
     def __init__(self):
         self.head = None
