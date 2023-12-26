@@ -21,6 +21,18 @@ class CircularSinglyLinkedList:
         self.length = 1
     '''
 
+    def __str__(self):
+        temp_node = self.head
+        result = ""
+        while temp_node is not None:
+            result += str(temp_node.value)
+            temp_node = temp_node.next
+            if temp_node == self.head:
+                break
+            result += " -> "
+        return result
+
+
     def append(self, value):
         new_node = Node(value)
         # If the linked list is empty, create a new node and let the tail point to itself.
