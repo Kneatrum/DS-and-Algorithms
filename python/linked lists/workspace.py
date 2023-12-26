@@ -10,6 +10,34 @@ from circular_singly_linked_list import *
 
 
 
+c_linked_list = CircularSinglyLinkedList()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 new_linked_list = SinglyLinkedList()
 
 new_linked_list.append(10)
@@ -57,3 +85,5 @@ print(new_linked_list)
 
 new_linked_list.reverse()
 print(new_linked_list)
+
+'''
