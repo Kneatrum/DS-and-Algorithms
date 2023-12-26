@@ -21,6 +21,7 @@ class CircularSinglyLinkedList:
         self.length = 1
     '''
 
+    # Method to print our circular linked list
     def __str__(self):
         temp_node = self.head
         result = ""
@@ -33,6 +34,7 @@ class CircularSinglyLinkedList:
         return result
 
 
+    # Adding a new node to the end or at the beginning of the list
     def append(self, value):
         new_node = Node(value)
         # If the linked list is empty, create a new node and let the tail point to itself.
@@ -48,6 +50,7 @@ class CircularSinglyLinkedList:
         self.length += 1
 
 
+    # Add a node to the beginning of the linked list (prepending).
     def prepend(self, value):
         new_node = Node(value)
         # If the linked list is empty, create a new node and let the tail point to itself.
