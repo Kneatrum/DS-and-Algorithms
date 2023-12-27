@@ -23,6 +23,12 @@ c_linked_list.prepend(5)
 print(c_linked_list)
 
 
+# Insert a new value to any position in the list
+c_linked_list.insert(40, 2)
+print(c_linked_list)
+
+
+
 
 
 
