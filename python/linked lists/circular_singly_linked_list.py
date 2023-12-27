@@ -96,3 +96,27 @@ class CircularSinglyLinkedList:
             temp_node.next = new_node
         self.length += 1
 
+
+    # Traversing the linked list.
+    def traverse(self):
+        temp_node = self.head
+        while temp_node is not None:
+            print(str(temp_node.value) + " ", end='')
+            temp_node = temp_node.next
+            if temp_node == self.head:
+                print() # Optional. This prints a new lin character
+                break
+
+    
+    # Searching for an element in the linked list
+    def search(self, target):
+        temp_node = self.head
+        while temp_node is not None:
+            if temp_node.value == target:
+                return True
+            temp_node = temp_node.next
+            if temp_node == self.head:
+                break
+        return False
+
+
