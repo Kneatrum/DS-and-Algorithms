@@ -12,11 +12,13 @@ from circular_singly_linked_list import *
 # Create an instance of a circular_singly_linked_list
 c_linked_list = CircularSinglyLinkedList()
 
+
 # Append a new value to the list and print it out
 c_linked_list.append(10)
 c_linked_list.append(20)
 c_linked_list.append(30)
 print(c_linked_list)
+
 
 # Prepend a new value to the list and print it out
 c_linked_list.prepend(5)
@@ -27,8 +29,10 @@ print(c_linked_list)
 c_linked_list.insert(40, 2)
 print(c_linked_list)
 
+
 # Traversing a circular_singly_linked_list
 c_linked_list.traverse()
+
 
 # Searching for an element in the list
 element = c_linked_list.search(10)
@@ -37,8 +41,10 @@ if element is not None:
 else:
     print("No element found")
 
+
 # Retrieving a value from a specific index in the list
 print(c_linked_list.get(0).value)
+
 
 # Updating a value from a specific index in the list
 c_linked_list.set(0, 100)
