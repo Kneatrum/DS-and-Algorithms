@@ -140,6 +140,25 @@ class CircularSinglyLinkedList:
             temp_node.value = value
             return True
         return False
+    
+
+    # Removing the first element from the linked list.
+    def pop_first(self):
+        temp = self.head
+        # If the list is empty, return nothing.
+        if self.head == None:
+            return None
+        # if the list only has one element, set the self.head and self.next to None.
+        elif self.length == 1:
+            self.head = None
+            self.tail = None
+        # Set the second element as the new head and set the tail to the new head.
+        else:
+            self.head = temp.next
+            temp.next = None
+            self.tail.next = self.head
+        self.length -= 1
+        return temp
         
 
 
