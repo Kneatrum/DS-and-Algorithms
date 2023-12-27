@@ -45,6 +45,11 @@ c_linked_list.set(0, 100)
 print(c_linked_list)
 
 
+# Removing the first element from the list
+c_linked_list.pop_first()
+print(c_linked_list)
+
+
 
 
 
