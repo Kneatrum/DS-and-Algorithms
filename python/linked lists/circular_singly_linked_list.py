@@ -125,12 +125,12 @@ class CircularSinglyLinkedList:
         if index >= self.length or index < -1:
             raise Exception("Index out of range")
         elif index == -1:
-            return self.tail.value
+            return self.tail
         else:
             current = self.head
             for _ in range(index):
                 current = current.next
-            return current.value
+            return current
         
 
 
