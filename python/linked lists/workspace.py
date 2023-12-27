@@ -37,6 +37,9 @@ if element is not None:
 else:
     print("No element found")
 
+# Retrieving a value from a specific index in the list
+print(c_linked_list.get(0))
+
 
 
 
