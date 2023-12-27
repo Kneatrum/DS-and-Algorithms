@@ -132,6 +132,15 @@ class CircularSinglyLinkedList:
                 current = current.next
             return current
         
+    
+    # Setting or updating a value in a specific index.
+    def set(self, index, value):
+        temp_node = self.get(index)
+        if temp_node:
+            temp_node.value = value
+            return True
+        return False
+        
 
 
 
