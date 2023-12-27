@@ -63,6 +63,36 @@ class CircularSinglyLinkedList:
             self.head = new_node
             self.tail.next = self.head
         self.length += 1
-        
 
+    
+    # Insert a node at any given position in the linked list.
+    def insert(self, value, index):
+        # Check if the index is within the bounds of the linked list
+        if index > self.length or index < 0:
+            raise Exception("Index out of bounds")
+        new_node = Node(value)
+        if index == 0:
+            # If the list is empty, insert a new node.
+            if self.length == 0:
+                self.head = new_node
+                self.tail = new_node
+                new_node.next = self.head
+            # Prepend the new node to the head of the linked list.
+            else:
+                new_node.next = self.head
+                self.head = new_node
+                self.tail.next = self.head
+        # If the index is equal to the length of the list, we add the new node after the tail and set the next.pointer and the new tail and
+        elif index == self.length:
+            self.tail.next = new_node
+            new_node.next = self.head
+            self.tail = new_node
+        # If the index is anywhere between the head and the tail
+        else:
+            temp_node = self.head
+            for _ in range(index - 1):
+                temp_node = temp_node.next
+            new_node.next = temp_node.next
+            temp_node.next = new_node
+        self.length += 1
 
