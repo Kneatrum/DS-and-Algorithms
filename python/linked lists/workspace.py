@@ -40,6 +40,10 @@ else:
 # Retrieving a value from a specific index in the list
 print(c_linked_list.get(0).value)
 
+# Updating a value from a specific index in the list
+c_linked_list.set(0, 100)
+print(c_linked_list)
+
 
 
 
