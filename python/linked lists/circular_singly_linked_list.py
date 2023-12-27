@@ -160,6 +160,29 @@ class CircularSinglyLinkedList:
         self.length -= 1
         return temp
         
+    
+    # Removing the last element
+    def pop_last(self):
+        # If the list is empty, return nothing.
+        if self.head == None:
+            return None
+        popped = self.tail
+        # If the length of the list is 1, remove the only present element
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+            return popped
+        # Else loop to the second last element and set it as the new tail
+        else:
+            temp_node = self.head
+            while temp_node.next is not self.tail:
+                temp_node = temp_node.next
+            self.tail = temp_node
+            self.tail.next = self.head
+            popped.next = None
+        self.length -= 1
+        return popped
+
 
 
 
