@@ -27,6 +27,17 @@ print(c_linked_list)
 c_linked_list.insert(40, 2)
 print(c_linked_list)
 
+# Traversing a circular_singly_linked_list
+c_linked_list.traverse()
+
+# Searching for an element in the list
+element = c_linked_list.search(10)
+if element is not None:
+    print("Found element")
+else:
+    print("No element found")
+
+
 
 
 
