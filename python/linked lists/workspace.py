@@ -18,6 +18,9 @@ print(dl_list.tail.prev.value)
 
 print(dl_list)
 
+dl_list.prepend(5)
+print(dl_list)
+
 
 
 
