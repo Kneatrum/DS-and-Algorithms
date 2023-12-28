@@ -14,6 +14,27 @@ class DoublyLinkedList:
         self.length = 0
 
 
+    # This method prints the doubly linked list
+    def __str__(self):
+        temp_node = self.head
+        result = ""
+        # Add the first null node to the string.
+        result += str(self.head.prev) + " <--> "
+
+        while temp_node:
+            result += str(temp_node.value)
+            temp_node = temp_node.next
+            # If the next node is not null, add the double direction arrow
+            if temp_node:
+                result += " <--> "
+            # If the next node is null, add the double direction arrow and the last Null.
+            else:
+                result += " <--> " + str(self.tail.next) + "\n"
+        return result
+
+        
+
+
     def append(self, value):
         new_node = Node(value)
         if self.head == None:
