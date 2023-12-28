@@ -56,8 +56,8 @@ c_linked_list.pop_first()
 print(c_linked_list)
 
 
-# Removing the last element from the list
-print(c_linked_list.pop_last().value)
+# Removing an element from any position in the list
+c_linked_list.remove(0)
 print(c_linked_list)
 
 

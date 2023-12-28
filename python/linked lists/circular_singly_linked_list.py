@@ -182,6 +182,26 @@ class CircularSinglyLinkedList:
             popped.next = None
         self.length -= 1
         return popped
+    
+
+    # Remove an element from the linked list
+    def remove(self, index):
+        if index < 0 or index >= self.length:
+            return None
+        elif index == 0:
+            self.pop_first()
+        elif index == self.length - 1:
+            self.pop_last()
+        else:
+            prev = self.get(index - 1)
+            to_pop = prev.next
+            prev.next = to_pop.next
+            to_pop.next = None
+            self.length -= 1
+            return to_pop
+
+
+
 
 
 
