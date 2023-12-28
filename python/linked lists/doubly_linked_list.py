@@ -19,7 +19,8 @@ class DoublyLinkedList:
         temp_node = self.head
         result = ""
         # Add the first null node to the string.
-        result += str(self.head.prev) + " <--> "
+        if self.length > 0:
+            result += str(self.head.prev) + " <--> "
 
         while temp_node:
             result += str(temp_node.value)
@@ -45,3 +46,16 @@ class DoublyLinkedList:
             new_node.prev = self.tail
             self.tail = new_node  
         self.length += 1
+
+
+    # Prependind a node to the beginning of the doubly linked list
+    def prepend(self, value):
+        # If the length of the list is 0, just append the new node
+        if self.length == 0:
+            self.append(value)
+        # Else, set the new node as the new head.
+        else:
+            new_node = Node(value)
+            new_node.next = self.head
+            self.head.prev = new_node
+            self.head = new_node
