@@ -61,6 +61,10 @@ c_linked_list.remove(0)
 print(c_linked_list)
 
 
+c_linked_list.delete_all()
+print(c_linked_list)
+
+
 
 
 

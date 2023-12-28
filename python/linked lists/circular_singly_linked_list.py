@@ -199,6 +199,16 @@ class CircularSinglyLinkedList:
             to_pop.next = None
             self.length -= 1
             return to_pop
+        
+        
+    # Deleting all noded from the linked list
+    def delete_all(self):
+        if self.length == 0:
+            return
+        self.head = None
+        self.tail.next = None
+        self.tail = None
+        self.length = 0
 
 
 
