@@ -22,6 +22,11 @@ dl_list.prepend(5)
 print(dl_list)
 
 
+# Traversing the list forwards and backwards.
+dl_list.traverse_backward()
+dl_list.traverse_forward()
+
+
 
 
 

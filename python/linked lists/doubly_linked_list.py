@@ -59,3 +59,25 @@ class DoublyLinkedList:
             new_node.next = self.head
             self.head.prev = new_node
             self.head = new_node
+
+    
+    # Traversing the doubly linked list forwards
+    def traverse_forward(self):
+        temp_node = self.head
+        while temp_node:
+            print(str(temp_node.value), end=" ")
+            temp_node = temp_node.next
+            if temp_node == None:
+                print()
+                return
+    
+
+    # Traversing the doubly linked list in the reverse order
+    def traverse_backward(self):
+        temp_node = self.tail
+        while temp_node:
+            print(str(temp_node.value), end=" ")
+            temp_node = temp_node.prev
+            if temp_node == None:
+                print()
+                return
