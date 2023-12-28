@@ -1,5 +1,19 @@
 from singly_linked_list import *
 from circular_singly_linked_list import *
+from doubly_linked_list import *
+
+
+
+
+
+
+dl_list = DoublyLinkedList()
+
+dl_list.append(10)
+dl_list.append(20)
+
+print(dl_list.tail.value)
+print(dl_list.tail.prev.value)
 
 
 
@@ -8,6 +22,24 @@ from circular_singly_linked_list import *
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 
 # Create an instance of a circular_singly_linked_list
 c_linked_list = CircularSinglyLinkedList()
@@ -63,6 +95,8 @@ print(c_linked_list)
 
 c_linked_list.delete_all()
 print(c_linked_list)
+
+"""
 
 
 
