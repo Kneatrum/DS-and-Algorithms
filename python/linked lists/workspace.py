@@ -11,9 +11,12 @@ dl_list = DoublyLinkedList()
 
 dl_list.append(10)
 dl_list.append(20)
+dl_list.append(30)
 
 print(dl_list.tail.value)
 print(dl_list.tail.prev.value)
+
+print(dl_list)
 
 
 
