@@ -9,15 +9,23 @@ from doubly_linked_list import *
 
 dl_list = DoublyLinkedList()
 
+
+# Appending nodes to a doubly linked list
 dl_list.append(10)
 dl_list.append(20)
 dl_list.append(30)
 
+
+# Printing the last and previous values of the node.
 print(dl_list.tail.value)
 print(dl_list.tail.prev.value)
 
+
+
 print(dl_list)
 
+
+# Prependig a  node to the doubly linked list
 dl_list.prepend(5)
 print(dl_list)
 
