@@ -35,6 +35,44 @@ dl_list.traverse_backward()
 dl_list.traverse_forward()
 
 
+# # Removing the the first node from the list
+# dl_list.pop_first()
+# print(dl_list)
+
+# # Removing the last node from the list
+# dl_list.pop_last()
+# print(dl_list)
+
+
+# Getting a node from a specific index in the doubly linked list
+print(dl_list.length)
+print(dl_list)
+# print(dl_list.get(1).value)
+print(dl_list.get(1).value)
+
+
+# Searching for a  value in the list.
+print(dl_list.search(10))
+print(dl_list.length)
+
+
+# Setting a value in a specific node.
+print(dl_list.set(0, 10))
+print(dl_list)
+
+
+
+# Deleting a node from any position in the list.
+dl_list.delete(3)
+print(dl_list)
+
+
+
+# Inserting a node to any position in the list.
+print(dl_list.insert(2, 100))
+print(dl_list)
+
+
 
 
 
