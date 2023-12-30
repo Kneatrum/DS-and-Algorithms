@@ -69,7 +69,7 @@ class CircularDoublyLinkedList:
         else:
             temp_node = self.head
             while temp_node is not None:
-                print(temp_node.value)
+                print(temp_node.value, end=" ")
                 if temp_node is self.tail:
                     break
                 temp_node = temp_node.next
