@@ -18,6 +18,7 @@ print([temp_node_value for temp_node_value in cdll])
 
 print(cdll.traverse())
 
+print(cdll.reverse_traversal())
 
 
 
