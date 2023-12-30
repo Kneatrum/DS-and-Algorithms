@@ -31,5 +31,33 @@ class CircularDoublyLinkedList:
         new_node.prev = new_node
 
 
+    def insert_cdll(self, value, index):
+        if self.head is None:
+            return "The CDLL does not exist"
+        else:
+            new_node = Node(value)
+            if index == 0:
+                new_node.next = self.head
+                new_node.prev = self.tail
+                self.head.prev = new_node
+                self.head = new_node
+                self.tail.next = new_node
+            elif index == 1:
+                new_node.next = self.head
+                new_node.prev = self.tail
+                self.head.prev = new_node
+                self.tail.next = new_node
+                self.tail = new_node
+            else:
+                temp_node = self.head
+                temp_index = 0
+                while temp_index < index - 1:
+                    temp_node = temp_node.next
+                    temp_index += 1
+                new_node.next = temp_node.next
+                new_node.prev = temp_node
+                new_node.next.prev = new_node
+                temp_node.next = new_node
+            return "Node has been inserted"
 
 
