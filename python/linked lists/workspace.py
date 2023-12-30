@@ -16,6 +16,8 @@ cdll.insert_cdll(1,1)
 cdll.insert_cdll(2,2)
 print([temp_node_value for temp_node_value in cdll])
 
+print(cdll.traverse())
+
 
 
 
