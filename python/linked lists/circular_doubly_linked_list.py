@@ -74,5 +74,15 @@ class CircularDoublyLinkedList:
                     break
                 temp_node = temp_node.next
 
-
-
+    
+    # Reverse traversal.
+    def reverse_traversal(self):
+        if self.head is None:
+            return "List is empty"
+        else:
+            temp_node = self.tail
+            while temp_node is not None:
+                print(temp_node.value, end=" ")
+                if temp_node is self.head:
+                    break
+                temp_node = temp_node.prev
