@@ -101,3 +101,39 @@ class CircularDoublyLinkedList:
                     return "Value not found"
                 temp_node = temp_node.next
             return None
+        
+
+    # Delete a node from the circular doubly linked list
+    def delete_node(self, location):
+        if self.head == None:
+            print("List is empty")
+        else:
+            if location == 0:
+                if self.head == self.tail:
+                    self.head.prev = None
+                    self.head.next = None
+                    self.head = None
+                    self.tail = None
+                else:
+                    self.head = self.head.next
+                    self.head.prev = self.tail
+                    self.tail.next = self.head
+            elif location == 1:
+                if self.head == self.tail:
+                    self.head.prev = None
+                    self.head.next = None
+                    self.head = None
+                    self.tail = None
+                else:
+                    self.tail = self.tail.prev
+                    self.tail.next =  self.head
+                    self.head.prev = self.tail
+            else:
+                current_node = self.head
+                index = 0
+                while index < location - 1:
+                    current_node = current_node.next
+                    index += 1
+                current_node.next = current_node.next.next
+                current_node.prev = current_node
+            print("Node deleted")
