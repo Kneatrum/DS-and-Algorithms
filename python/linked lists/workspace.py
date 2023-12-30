@@ -20,6 +20,8 @@ print(cdll.traverse())
 
 print(cdll.reverse_traversal())
 
+print(cdll.search(6))
+
 
 
 
