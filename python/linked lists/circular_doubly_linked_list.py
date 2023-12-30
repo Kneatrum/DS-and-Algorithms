@@ -62,3 +62,17 @@ class CircularDoublyLinkedList:
             return "Node has been inserted"
 
 
+    # Traversal method.
+    def traverse(self):
+        if self.head is None:
+            return "List is empty"
+        else:
+            temp_node = self.head
+            while temp_node is not None:
+                print(temp_node.value)
+                if temp_node is self.tail:
+                    break
+                temp_node = temp_node.next
+
+
+
