@@ -1,12 +1,42 @@
 from singly_linked_list import *
 from circular_singly_linked_list import *
 from doubly_linked_list import *
+from circular_doubly_linked_list import *
+
+
+
+
+
+cdll = CircularDoublyLinkedList()
+
+
+cdll.create_cdll(5)
+print([temp_node.value for temp_node in cdll]) 
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"""
 dl_list = DoublyLinkedList()
 
 
@@ -71,6 +101,7 @@ print(dl_list)
 # Inserting a node to any position in the list.
 print(dl_list.insert(2, 100))
 print(dl_list)
+"""
 
 
 
