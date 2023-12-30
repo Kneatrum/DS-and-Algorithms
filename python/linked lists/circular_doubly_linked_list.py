@@ -86,3 +86,18 @@ class CircularDoublyLinkedList:
                 if temp_node is self.head:
                     break
                 temp_node = temp_node.prev
+
+
+    # Search method.
+    def search(self, value):
+        if self.head is None:
+            return "List is empty"
+        else:
+            temp_node = self.head
+            while temp_node:
+                if temp_node.value == value:
+                    return temp_node.value
+                if temp_node == self.tail:
+                    return "Value not found"
+                temp_node = temp_node.next
+            return None
