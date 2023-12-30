@@ -40,6 +40,11 @@ cdll.delete_node(-1)
 print([temp_node_value for temp_node_value in cdll])
 
 
+# Deleting the entire CDLL
+print(cdll.delete_all())
+print([temp_node_value for temp_node_value in cdll])
+
+
 
 
 
