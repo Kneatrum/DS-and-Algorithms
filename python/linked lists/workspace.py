@@ -9,17 +9,29 @@ from circular_doubly_linked_list import *
 
 cdll = CircularDoublyLinkedList()
 
-
+# Creating a circular doubly_linked_list
 cdll.create_cdll(5)
+
+
+# Inseting nodes in a circular doubly_linked_list
 cdll.insert_cdll(0,0)
 cdll.insert_cdll(1,1)
 cdll.insert_cdll(2,2)
+
+
+# Printing the values of the circular doubly linked list
 print([temp_node_value for temp_node_value in cdll])
 
+
+# Traversing the cdll.
 print(cdll.traverse())
 
+
+# Reverse reaversal
 print(cdll.reverse_traversal())
 
+
+# Search
 print(cdll.search(6))
 
 
