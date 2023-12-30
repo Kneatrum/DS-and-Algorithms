@@ -137,3 +137,19 @@ class CircularDoublyLinkedList:
                 current_node.next = current_node.next.next
                 current_node.prev = current_node
             print("Node deleted")
+
+    # Delete entire CDLL
+    def delete_all(self):
+        if self.head == None:
+            return "List is already empty"
+        else:
+            self.tail.next = None
+            temp_node = self.head
+            while temp_node:
+                temp_node.prev = None
+                temp_node = temp_node.next
+            self.head = None
+            self.tail = None
+            return "List has been deleted"
+
+
