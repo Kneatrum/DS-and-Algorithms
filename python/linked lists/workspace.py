@@ -11,7 +11,10 @@ cdll = CircularDoublyLinkedList()
 
 
 cdll.create_cdll(5)
-print([temp_node.value for temp_node in cdll]) 
+cdll.insert_cdll(0,0)
+cdll.insert_cdll(1,1)
+cdll.insert_cdll(2,2)
+print([temp_node_value for temp_node_value in cdll])
 
 
 
