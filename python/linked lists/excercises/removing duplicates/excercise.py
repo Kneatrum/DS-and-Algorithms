@@ -1,4 +1,6 @@
 
+# SINGLY LINKED LIST EXAMPLE
+
 """
 Removing duplicates from the list below.
 1 -> 2 -> 2 -> 3 -> 4 -> 4 -> 4 -> 5
