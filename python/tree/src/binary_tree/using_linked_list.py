@@ -3,6 +3,9 @@ Using a linked list to create a binary tree.
 
 """
 
+import queue_linkedlist as queue
+
+
 class TreeNode:
     def __init__(self, data):
         self.data = data
@@ -35,7 +38,19 @@ def post_order_traversal(root_node):
     print(root_node.data)
 
 
-
+def level_order_traversal(root_node):
+    if not root_node:
+        return
+    else:
+        my_queue = queue.Queue()
+        my_queue.enqueue(root_node)
+        while not my_queue.is_empty():
+            root = my_queue.dequeue()
+            print(root.value.data)
+            if root.value.left_child is not None:
+                my_queue.enqueue(root.value.left_child)
+            if root.value.right_child is not None:
+                my_queue.enqueue(root.value.right_child)
 
 
 
@@ -43,12 +58,16 @@ def post_order_traversal(root_node):
 binary_tree = TreeNode("Drinks")
 
 # Creating the left and right child nodes
-hot = TreeNode("Hot")
-cold = TreeNode("Cold")
+left_child = TreeNode("Hot")
+tea = TreeNode("Tea")
+coffee = TreeNode("Coffee")
+left_child.left_child = tea
+left_child.right_child = coffee
+right_child = TreeNode("Cold")
 
-# Adding the children to the binary tree
-binary_tree.left_child = hot
-binary_tree.right_child = cold
+binary_tree.left_child = left_child
+binary_tree.right_child = right_child
+
 
 """
            TRAVERSAL OF THE BINARY TREE
@@ -62,4 +81,8 @@ _________________________________________________________
 # pre_order_traversal(binary_tree)
 
 # Traversing the binary tree using the post order traversal
-post_order_traversal(binary_tree)
+# post_order_traversal(binary_tree)
+
+level_order_traversal(binary_tree)
+
+
