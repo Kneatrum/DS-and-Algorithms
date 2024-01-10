@@ -53,6 +53,24 @@ def level_order_traversal(root_node):
                 my_queue.enqueue(root.value.right_child)
 
 
+def search_binary_tree(root_node, node_value):
+    if not root_node:
+        return "The binary tree does not exist"
+    else:
+        my_queue = queue.Queue()
+        my_queue.enqueue(root_node)
+        while not my_queue.is_empty():
+            root = my_queue.dequeue()
+            if root.value.data == node_value:
+                return "Success"
+            if root.value.left_child is not None:
+                my_queue.enqueue(root.value.left_child)
+            if root.value.right_child is not None:
+                my_queue.enqueue(root.value.right_child)
+        return "Not found"
+
+
+
 
 # Instance of the binary tree
 binary_tree = TreeNode("Drinks")
@@ -83,6 +101,8 @@ _________________________________________________________
 # Traversing the binary tree using the post order traversal
 # post_order_traversal(binary_tree)
 
-level_order_traversal(binary_tree)
+# Slevel_order_traversal(binary_tree)
+
+print(search_binary_tree(binary_tree, "Tea"))
 
 
