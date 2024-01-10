@@ -68,6 +68,27 @@ def search_binary_tree(root_node, node_value):
             if root.value.right_child is not None:
                 my_queue.enqueue(root.value.right_child)
         return "Not found"
+    
+
+def insert_node(root_node, new_node):
+    if not root_node:
+        root_node = new_node
+    else:
+        my_queue = queue.Queue()
+        my_queue.enqueue(root_node)
+        while not my_queue.is_empty():
+            root = my_queue.dequeue()
+            if root.value.left_child is not None:
+                my_queue.enqueue(root.value.left_child)
+            else:
+                root.value.left_child = new_node
+                return "Successfully inserted"
+            if root.value.right_child is not None:
+                my_queue.enqueue(root.value.right_child)
+            else:
+                root.value.right_child = new_node
+                return "Successfully inserted"
+                
 
 
 
@@ -103,6 +124,23 @@ _________________________________________________________
 
 # Slevel_order_traversal(binary_tree)
 
+
+"""
+           SEARCHING FOR A NODE INSIDE A BINARY TREE
+_________________________________________________________
+"""
 print(search_binary_tree(binary_tree, "Tea"))
+
+
+"""
+           INSERTING A NODE INSIDE A BINARY TREE
+_________________________________________________________
+"""
+
+new_node = TreeNode("Cola")
+print(insert_node(binary_tree, new_node))
+level_order_traversal(binary_tree)
+
+
 
 
